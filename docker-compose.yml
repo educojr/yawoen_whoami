@@ -1,0 +1,50 @@
+version: '3.4'
+
+networks:
+        yn-app-network:
+                driver: 'bridge'
+
+services:
+        whoami_1:
+                image: jwilder/whoami
+                restart: always
+                networks:
+                        - yn-app-network
+         
+        whoami_2:
+                image: jwilder/whoami
+                restart: always
+                networks:
+                        - yn-app-network
+
+        whoami_3:
+                image: jwilder/whoami
+                restart: always
+                networks:
+                        - yn-app-network
+
+        lb:
+                build: ./lb_nginx
+                restart: always
+                networks:
+                        - yn-app-network
+                ports:
+                        - "80:80"
+                depends_on:
+                        - whoami_1
+                        - whoami_2
+                        - whoami_3
+
+        cadvisor:
+                image: google/cadvisor
+                restart: always
+                networks:
+                        - yn-app-network
+                ports:
+                        - "8080:8080"
+                volumes:
+                        - /:/rootfs:ro
+                        - /var/run:/var/run:ro
+                        - /sys:/sys:ro
+                        - /var/lib/docker/:/var/lib/docker:ro
+                        - /dev/disk/:/dev/disk:ro
