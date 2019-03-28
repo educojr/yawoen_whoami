@@ -8,14 +8,14 @@ services:
         whoami_1:
                 image: jwilder/whoami
                 restart: always
-                hostname: whoami_3
+                hostname: whoami_1
                 networks:
                         - yn-app-network
          
         whoami_2:
                 image: jwilder/whoami
                 restart: always
-                hostname: whoami_3
+                hostname: whoami_2
                 networks:
                         - yn-app-network
 
