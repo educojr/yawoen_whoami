@@ -19,7 +19,7 @@ $ git clone https://github.com/educojr/yawoen_whoami.git
 4 - Adicionar as linhas abaixo no crontab do root:
 ```
 # Iniciar a aplicação whomai
-00 7 * * * root bash /opt/yawoen_whoami/app.sh start
+00 7 * * * root bash /home/ubuntu/app.sh start
 # Encerrar a aplicação whomai
-00 19 * * * root bash /opt/yawoen_whoami/app.sh stop
+00 19 * * * root bash /home/ubuntu/app.sh stop
 ```
