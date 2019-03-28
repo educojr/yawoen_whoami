@@ -19,5 +19,5 @@ $ git clone https://github.com/educojr/yawoen_whoami.git
 4 - Adicionar as linhas abaixo no crontab do root:
 ```
 # Aplicacao whomai
-*/5 * * * * root bash /home/ubuntu/yawoen_whoami/app.sh
+*/5 * * * * sudo bash /home/ubuntu/yawoen_whoami/app.sh
 ```
