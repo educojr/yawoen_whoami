@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Functions
-}
 start(){
   echo "Starting application"
   cd /opt/yawoen_whoami/ && docker-compose up --build -d
