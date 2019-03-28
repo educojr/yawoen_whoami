@@ -10,7 +10,7 @@ sudo snap install docker
 ```
 3 - Baixar os arquivos para o funcionamento completo da solução:
 ```
-git clone https://github.com/educojr/yawoen_whoami.git /opt/
+git clone https://github.com/educojr/yawoen_whoami.git /opt/yawoen_whoami/
 ```
 4 - Adicionar as linhas abaixo no crontab do root:
 ```
