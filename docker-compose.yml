@@ -8,24 +8,28 @@ services:
         whoami_1:
                 image: jwilder/whoami
                 restart: always
+                hostname: whoami_3
                 networks:
                         - yn-app-network
          
         whoami_2:
                 image: jwilder/whoami
                 restart: always
+                hostname: whoami_3
                 networks:
                         - yn-app-network
 
         whoami_3:
                 image: jwilder/whoami
                 restart: always
+                hostname: whoami_3
                 networks:
                         - yn-app-network
 
         lb:
                 build: ./lb_nginx
                 restart: always
+                hostname: lb_nginx
                 networks:
                         - yn-app-network
                 ports:
@@ -38,6 +42,7 @@ services:
         cadvisor:
                 image: google/cadvisor
                 restart: always
+                hostname: cadvisor
                 networks:
                         - yn-app-network
                 ports:
@@ -48,3 +53,4 @@ services:
                         - /sys:/sys:ro
                         - /var/lib/docker/:/var/lib/docker:ro
                         - /dev/disk/:/dev/disk:ro
+                privileged: true
