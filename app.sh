@@ -3,22 +3,15 @@
 # Functions
 start(){
   echo "Starting application"
-  cd /opt/yawoen_whoami/ && docker-compose up --build -d
+  cd /home/ubuntu/yawoen_whoami/ && docker-compose up --no-recreate -d
   [ $? -eq 0 ] && echo "Application started!!!" || echo "Error starting application"
 }
 
 stop(){
-  echo "Stopping aapli"
-  cd /opt/yawoen_whoami/ && docker-compose down
+  echo "Stopping aplication"
+  cd /home/ubuntu/yawoen_whoami/ && docker-compose down
   [ $? -eq 0 ] && echo "Application stopped!!!" || echo "Error stopping application"
 }
 
 # Main
-case $1 in
-  start)
-    start
-    ;;
-  stop)
-    stop
-    ;;
-esac
+[ $(date +%H) -gt 07 ] && [ $(date +%H) -lt 20 ] && start || stop
