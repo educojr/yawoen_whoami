@@ -35,6 +35,9 @@ $ git clone https://github.com/educojr/yawoen_whoami.git
 
 7 - Add the application manager script to crontab:
 ```
+$ crontab -e
+```
+```
 # Whoami application manager
 */5 * * * * sudo bash /home/ubuntu/yawoen_whoami/app.sh
 ```
