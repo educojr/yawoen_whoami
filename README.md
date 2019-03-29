@@ -14,12 +14,12 @@ This is the solution to Yaweon!
 
 3 - After editing the security group, launch the server!
 
-4 - Check the timezone and change it if necessary:
+4 - Now, access the server using SSH, check the timezone and change it if necessary:
 ```
 $ sudo dpkg-reconfigure tzdata
 ```
 
-5 - Now, access the server using SSH and install the Docker/Docker Compose:
+5 - Install the Docker/Docker Compose:
 ```
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
