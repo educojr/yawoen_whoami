@@ -40,3 +40,9 @@ PS: if you don't want wait 5 minutes, just go to application directory and run i
 ```
 cd /home/ubuntu/yawoen_whoami/ && docker-compose up --no-recreate -d
 ```
+
+8 - Now, just access the application using the browser and enjoy it!
+- http://IP
+
+9 - To access the monitor interface:
+- http://IP:8080
