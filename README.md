@@ -46,7 +46,7 @@ $ crontab -e
 
 PS: if you don't want to wait 5 minutes, just go to application directory and run this command:
 ```
-cd /home/ubuntu/yawoen_whoami/ && docker-compose up --no-recreate -d
+$ sudo bash /home/ubuntu/yawoen_whoami/app.sh
 ```
 
 9 - Now, just access the application using the browser and enjoy it!
